@@ -15,9 +15,13 @@ before(()=>{
 after(()=>{
     cy.log('this an after text')
 })
+
+beforeEach(()=>{
+    cy.visit('https://automationexercise.com/products')
+
+})
 describe('Chapt 4 - Search with class, ID, name and placeholder', () => {
     it('case 1', ()=>{
-        cy.visit('https://automationexercise.com/products')
         cy.get('#search_product').type('ID, ') //busqueda por ID
         cy.get('.form-control.input-lg').type('clase ') //busqueda por clase
         cy.get('[name="search"]').type('nombre') //busqueda por nombre
@@ -25,8 +29,8 @@ describe('Chapt 4 - Search with class, ID, name and placeholder', () => {
     })
 })
 
-/*describe('chapt 5 - Chainer', ()=> {
-    it('case 1 - write and clear', ()=> {
+describe('check boxes', ()=> {
+    it('case 1 - ', ()=> {
 
     })
-}) */
+}) 
